@@ -82,15 +82,13 @@ export const App: React.FC = () => {
 
     switch (statusFilter) {
       case 'all':
-        setFilteredTodos([...todos]);
+        filteredList = [...todos];
         break;
       case 'active':
         filteredList = todos.filter(todo => todo.completed === false);
-        setFilteredTodos([...filteredList]);
         break;
       case 'completed':
         filteredList = todos.filter(todo => todo.completed === true);
-        setFilteredTodos([...filteredList]);
         break;
     }
 
